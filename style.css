@@ -1,486 +1,393 @@
-.frame-4,
-.frame-4 * {
-  box-sizing: border-box;
-}
-.frame-4 {
-  height: 4441px;
-  position: relative;
-}
-.frame-6 {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 1436px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
-.home {
-  background: rgba(56, 4, 4, 0.94);
-  align-self: stretch;
-  flex-shrink: 0;
-  height: 873px;
-  position: relative;
-  overflow: hidden;
-}
-.airbrush-image-extender-1 {
-  width: 1718px;
-  height: 1029px;
-  position: absolute;
-  left: -141px;
-  top: -147px;
-  object-fit: cover;
-  aspect-ratio: 1718/1029;
-}
-.po {
-  color: rgba(56, 4, 4, 0.94);
-  text-align: center;
-  font-family: "DmSerifDisplay-Italic", sans-serif;
-  font-size: 128px;
-  font-weight: 400;
-  font-style: italic;
-  position: absolute;
-  left: 444px;
-  top: 248.56px;
-  width: 326px;
-  height: 195.02px;
-  transform-origin: 0 0;
-  transform: rotate(-0.977deg) scale(1, 1);
-}
-.lio {
-  color: #380404;
-  text-align: center;
-  font-family: "DmSerifDisplay-Italic", sans-serif;
-  font-size: 128px;
-  font-weight: 400;
-  font-style: italic;
-  position: absolute;
-  left: 727px;
-  top: 457.76px;
-  width: 220.64px;
-  height: 158.63px;
-  transform-origin: 0 0;
-  transform: rotate(-0.977deg) scale(1, 1);
-}
-.fo {
-  color: #380404;
-  text-align: center;
-  font-family: "DmSerifDisplay-Italic", sans-serif;
-  font-size: 128px;
-  font-weight: 400;
-  font-style: italic;
-  position: absolute;
-  left: 717px;
-  top: 332.76px;
-  width: 220.64px;
-  height: 65.35px;
-  transform-origin: 0 0;
-  transform: rotate(-0.977deg) scale(1, 1);
-}
-.rt {
-  color: rgba(56, 4, 4, 0.94);
-  text-align: center;
-  font-family: "DmSerifDisplay-Italic", sans-serif;
-  font-size: 128px;
-  font-weight: 400;
-  font-style: italic;
-  position: absolute;
-  left: 496px;
-  top: 336.76px;
-  width: 220.64px;
-  height: 65.35px;
-  transform-origin: 0 0;
-  transform: rotate(-0.977deg) scale(1, 1);
-}
-._33-a-3007-b-dc-41-4-eb-4-ba-3-b-ade-20-f-45753-e-1-1 {
-  width: 215px;
-  height: 623px;
-  position: absolute;
-  left: 607px;
-  top: 243px;
-  object-fit: cover;
-  aspect-ratio: 215/623;
-}
-.hi-i-m-alex {
-  color: #380404;
-  text-align: left;
-  font-family: "-", sans-serif;
-  font-size: 128px;
-  font-weight: 400;
-  position: absolute;
-  left: 302px;
-  top: 88px;
-  width: 943px;
-  height: 213px;
-}
-.hi-i-m-alex-span {
-  font-family: "B612Mono-Regular", sans-serif;
-}
-.hi-i-m-alex-span2 {
-  font-family: "BodoniModa-Regular", sans-serif;
-}
-.hi-i-m-alex-span3 {
-  font-family: "PinyonScript-Regular", sans-serif;
-}
-.frame-3 {
-  width: 112px;
-  height: 122px;
-  position: absolute;
-  left: 727px;
-  top: 207px;
-  overflow: hidden;
-}
-.introduction {
-  background: rgba(56, 4, 4, 0.94);
-  align-self: stretch;
-  flex-shrink: 0;
-  height: 892px;
-  position: relative;
-  overflow: hidden;
-}
-.texturelabs-paper-128-s-1 {
-  opacity: 0.22;
-  width: 1499px;
-  height: 1138px;
-  position: absolute;
-  left: -33px;
-  top: -23px;
-  object-fit: cover;
-  aspect-ratio: 1499/1138;
-}
-.introduction2 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "AntonSc-Regular", sans-serif;
-  font-size: 230px;
-  letter-spacing: 0.05em;
-  font-weight: 400;
-  position: absolute;
-  left: 64px;
-  top: 552px;
-  width: 1614px;
-  height: 293px;
-}
-.i-am-a-bsit-student-who-is-confident-strong-minded-and-charismatic-known-for-my-humor-and-approachable-presence-i-carry-myself-with-confidence-while-staying-focused-and-determined-in-my-field {
-  text-align: left;
-  position: absolute;
-  left: 611px;
-  top: 117px;
-  width: 646px;
-  height: 435px;
-}
-.i-am-a-bsit-student-who-is-confident-strong-minded-and-charismatic-known-for-my-humor-and-approachable-presence-i-carry-myself-with-confidence-while-staying-focused-and-determined-in-my-field-span {
-  color: #000000;
-  font-family: "CrimsonText-Regular", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-}
-.i-am-a-bsit-student-who-is-confident-strong-minded-and-charismatic-known-for-my-humor-and-approachable-presence-i-carry-myself-with-confidence-while-staying-focused-and-determined-in-my-field-span2 {
-  color: #ffffff;
-  font-family: "Poppins-Regular", sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-}
-._111111-1 {
-  width: 311px;
-  height: 836px;
-  position: absolute;
-  left: 103px;
-  top: 56px;
-  object-fit: cover;
-  aspect-ratio: 311/836;
-}
-.education {
-  background: #ffffff;
-  align-self: stretch;
-  flex-shrink: 0;
-  height: 892px;
-  position: relative;
-  overflow: hidden;
-}
-.vintage-paper-overlay-texture-nostalgic-charm-photo-1 {
-  opacity: 0.22;
-  width: 1040px;
-  height: 1470px;
-  position: absolute;
-  left: 1453px;
-  top: -34px;
-  transform-origin: 0 0;
-  transform: rotate(90deg) scale(1, 1);
-  object-fit: cover;
-  aspect-ratio: 1040/1470;
-}
-.education2 {
-  color: #380404;
-  text-align: left;
-  font-family: "AntonSc-Regular", sans-serif;
-  font-size: 180px;
-  letter-spacing: 0.05em;
-  font-weight: 400;
-  position: absolute;
-  left: 1183px;
-  top: 849px;
-  width: 807px;
-  height: 253px;
-  transform-origin: 0 0;
-  transform: rotate(-90deg) scale(1, 1);
-}
-.psb-elementary-school-2018-made-a-lot-of-long-term-friends-my-core-memory-is-when-i-purposely-startled-our-principal-for-fun-gained-compliments-for-being-neat-opol-national-secondary-technical-school-2022-consistent-with-honor-student-my-core-memory-is-when-my-friend-got-into-a-fight-and-i-was-gotten-involved-with-it-even-though-i-haven-t-done-anything-phinma-cagayan-de-oro-college-2024-took-up-gas-majoring-in-criminology-and-was-awarded-as-snappy-student-joined-a-lot-of-tournament-such-as-mobile-legends-in-panagtigi-intramurals-ballroom-dance-contest-and-was-awarded-a-leadership-awardee-opol-community-college-present-taking-up-bsit-and-now-in-the-second-year-had-an-experience-as-rifle-man-colors-in-rotc-joined-many-dance-contest-chants-and-ml-tournaments {
-  color: #380404;
-  text-align: left;
-  font-family: "-", sans-serif;
-  font-size: 28px;
-  font-weight: 400;
-  position: absolute;
-  left: 37px;
-  top: 22px;
-  width: 912px;
-  height: 781px;
-}
-.psb-elementary-school-2018-made-a-lot-of-long-term-friends-my-core-memory-is-when-i-purposely-startled-our-principal-for-fun-gained-compliments-for-being-neat-opol-national-secondary-technical-school-2022-consistent-with-honor-student-my-core-memory-is-when-my-friend-got-into-a-fight-and-i-was-gotten-involved-with-it-even-though-i-haven-t-done-anything-phinma-cagayan-de-oro-college-2024-took-up-gas-majoring-in-criminology-and-was-awarded-as-snappy-student-joined-a-lot-of-tournament-such-as-mobile-legends-in-panagtigi-intramurals-ballroom-dance-contest-and-was-awarded-a-leadership-awardee-opol-community-college-present-taking-up-bsit-and-now-in-the-second-year-had-an-experience-as-rifle-man-colors-in-rotc-joined-many-dance-contest-chants-and-ml-tournaments-span {
-  font-family: "Poppins-ExtraBold", sans-serif;
-  font-weight: 800;
-}
-.psb-elementary-school-2018-made-a-lot-of-long-term-friends-my-core-memory-is-when-i-purposely-startled-our-principal-for-fun-gained-compliments-for-being-neat-opol-national-secondary-technical-school-2022-consistent-with-honor-student-my-core-memory-is-when-my-friend-got-into-a-fight-and-i-was-gotten-involved-with-it-even-though-i-haven-t-done-anything-phinma-cagayan-de-oro-college-2024-took-up-gas-majoring-in-criminology-and-was-awarded-as-snappy-student-joined-a-lot-of-tournament-such-as-mobile-legends-in-panagtigi-intramurals-ballroom-dance-contest-and-was-awarded-a-leadership-awardee-opol-community-college-present-taking-up-bsit-and-now-in-the-second-year-had-an-experience-as-rifle-man-colors-in-rotc-joined-many-dance-contest-chants-and-ml-tournaments-span2 {
-  font-family: "Poppins-Regular", sans-serif;
-}
-.psb-elementary-school-2018-made-a-lot-of-long-term-friends-my-core-memory-is-when-i-purposely-startled-our-principal-for-fun-gained-compliments-for-being-neat-opol-national-secondary-technical-school-2022-consistent-with-honor-student-my-core-memory-is-when-my-friend-got-into-a-fight-and-i-was-gotten-involved-with-it-even-though-i-haven-t-done-anything-phinma-cagayan-de-oro-college-2024-took-up-gas-majoring-in-criminology-and-was-awarded-as-snappy-student-joined-a-lot-of-tournament-such-as-mobile-legends-in-panagtigi-intramurals-ballroom-dance-contest-and-was-awarded-a-leadership-awardee-opol-community-college-present-taking-up-bsit-and-now-in-the-second-year-had-an-experience-as-rifle-man-colors-in-rotc-joined-many-dance-contest-chants-and-ml-tournaments-span3 {
-  font-family: "Poppins-Black", sans-serif;
-  font-weight: 900;
-}
-.fi-1 {
-  width: 342px;
-  height: 921px;
-  position: absolute;
-  left: 928px;
-  top: 12px;
-  object-fit: cover;
-  aspect-ratio: 342/921;
-}
-.hobbies {
-  background: rgba(56, 4, 4, 0.94);
-  align-self: stretch;
-  flex-shrink: 0;
-  height: 892px;
-  position: relative;
-  overflow: hidden;
-}
-.texturelabs-paper-128-s-2 {
-  opacity: 0.22;
-  width: 1515px;
-  height: 1150px;
-  position: absolute;
-  left: -28px;
-  top: -209px;
-  object-fit: cover;
-  aspect-ratio: 1515/1150;
-}
-.hobbies2 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "AntonSc-Regular", sans-serif;
-  font-size: 300px;
-  letter-spacing: 0.05em;
-  font-weight: 400;
-  position: absolute;
-  left: 324px;
-  top: 446px;
-  width: 1127px;
-  height: 381px;
-}
-.untitled-1 {
-  width: 400px;
-  height: 739px;
-  position: absolute;
-  left: 838px;
-  top: 218px;
-  object-fit: cover;
-  aspect-ratio: 400/739;
-}
-.online-games-nature-trips-taking-random-videos-dancing-singing {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Poppins-ExtraBold", sans-serif;
-  font-size: 40px;
-  font-weight: 800;
-  position: absolute;
-  left: 149px;
-  top: 24px;
-  width: 556px;
-  height: 422px;
-}
-.contact {
-  background: #ffffff;
-  align-self: stretch;
-  flex-shrink: 0;
-  height: 892px;
-  position: relative;
-  overflow: hidden;
-}
-.vintage-paper-overlay-texture-nostalgic-charm-photo-2 {
-  opacity: 0.14;
-  width: 1068px;
-  height: 1510px;
-  position: absolute;
-  left: 1466px;
-  top: -41px;
-  transform-origin: 0 0;
-  transform: rotate(90deg) scale(1, 1);
-  object-fit: cover;
-  aspect-ratio: 1068/1510;
-}
-.email-address-alexrosalita-gmail-com-phone-number-639-285-487-065 {
-  color: #380404;
-  text-align: left;
-  font-family: "-", sans-serif;
-  font-size: 28px;
-  font-weight: 400;
-  position: absolute;
-  left: 664px;
-  top: 555px;
-  width: 591px;
-  height: 298px;
-}
-.email-address-alexrosalita-gmail-com-phone-number-639-285-487-065-span {
-  font-family: "Poppins-ExtraBold", sans-serif;
-  font-weight: 800;
-}
-.email-address-alexrosalita-gmail-com-phone-number-639-285-487-065-span2 {
-  font-family: "Poppins-Regular", sans-serif;
-}
-.facebook-alex-rosalita-jr-instagram-rosaaaliittaaa {
-  color: #380404;
-  text-align: left;
-  font-family: "-", sans-serif;
-  font-size: 28px;
-  font-weight: 400;
-  position: absolute;
-  left: 1071px;
-  top: 555px;
-  width: 591px;
-  height: 298px;
-}
-.facebook-alex-rosalita-jr-instagram-rosaaaliittaaa-span {
-  font-family: "Poppins-ExtraBold", sans-serif;
-  font-weight: 800;
-}
-.facebook-alex-rosalita-jr-instagram-rosaaaliittaaa-span2 {
-  font-family: "Poppins-Regular", sans-serif;
-}
-.contact-me {
-  color: #380404;
-  text-align: left;
-  font-family: "AntonSc-Regular", sans-serif;
-  font-size: 230px;
-  letter-spacing: 0.05em;
-  font-weight: 400;
-  position: absolute;
-  left: 207px;
-  top: -41px;
-  width: 1191px;
-  height: 318px;
-}
-.untitled-2-1 {
-  width: 615px;
-  height: 876px;
-  position: absolute;
-  left: -271px;
-  top: 272.3px;
-  transform-origin: 0 0;
-  transform: rotate(-23deg) scale(1, 1);
-  object-fit: cover;
-  aspect-ratio: 615/876;
-}
-.frame-7 {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 1442px;
-  position: fixed;
-  left: -6px;
-  top: 0px;
-}
-.frame-5 {
-  align-self: stretch;
-  flex-shrink: 0;
-  height: 61px;
-  position: relative;
-}
-.frame-2 {
-  background: #380404;
-  width: 1442px;
-  height: 49px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  overflow: hidden;
-}
-.home2 {
-  color: #ffffff;
-  text-align: center;
-  font-family: "YsabeauOffice-ExtraBoldItalic", sans-serif;
-  font-size: 32px;
-  font-weight: 800;
-  font-style: italic;
-  position: absolute;
-  left: 19px;
-  top: 6px;
-  width: 124px;
-  height: 42px;
-}
-.introduction3 {
-  color: #f5f5f5;
-  text-align: center;
-  font-family: "YsabeauOffice-ExtraBoldItalic", sans-serif;
-  font-size: 32px;
-  font-weight: 800;
-  font-style: italic;
-  position: absolute;
-  left: 187px;
-  top: 5px;
-  width: 371px;
-  height: 43px;
-}
-.education3 {
-  color: #f5f5f5;
-  text-align: center;
-  font-family: "YsabeauOffice-ExtraBoldItalic", sans-serif;
-  font-size: 32px;
-  font-weight: 800;
-  font-style: italic;
-  position: absolute;
-  left: 522px;
-  top: 6px;
-  width: 371px;
-  height: 43px;
-}
-.hobbies3 {
-  color: #f5f5f5;
-  text-align: center;
-  font-family: "YsabeauOffice-ExtraBoldItalic", sans-serif;
-  font-size: 32px;
-  font-weight: 800;
-  font-style: italic;
-  position: absolute;
-  left: 918px;
-  top: 5px;
-  width: 170px;
-  height: 44px;
-}
-.contact2 {
-  color: #f5f5f5;
-  text-align: center;
-  font-family: "YsabeauOffice-ExtraBoldItalic", sans-serif;
-  font-size: 32px;
-  font-weight: 800;
-  font-style: italic;
-  position: absolute;
-  left: 1223px;
-  top: 6px;
-  width: 170px;
-  height: 43px;
-}
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'VT323', monospace;
+      background: linear-gradient(180deg,
+        #c8e6c9 0%, #cde4c4 7%, #d2e1c0 14%, #d7debb 21%,
+        #dbdcb6 29%, #e0d9b2 36%, #e4d7ad 43%, #e8d4a8 50%,
+        #e4d7ad 57%, #e0d9b2 64%, #dbdcb6 71%, #d7debb 79%,
+        #d2e1c0 86%, #cde4c4 93%, #c8e6c9 100%);
+      min-height: 100vh;
+      color: #5c4033;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: #8b6f47;
+      border-bottom: 3px solid #8b6f47;
+      box-shadow: 0 3px 0 rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 32px;
+    }
+    .nav-logo {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 11px;
+      color: #f4e4bc;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+    .nav-links a {
+      font-family: 'VT323', monospace;
+      font-size: 20px;
+      color: #f4e4bc;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #fff; }
+
+    /* ── WRAPPER ── */
+    main { padding-top: 60px; }
+
+    /* ── SECTION BASE ── */
+    section {
+      width: 100%;
+      padding: 64px 5%;
+    }
+
+    /* ── CARD style ── */
+    .card {
+      background: rgba(244, 228, 193, 0.9);
+      border: 3px solid #8b6f47;
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+      padding: 24px;
+    }
+
+    /* ──────────────────────────────────
+       HERO
+    ────────────────────────────────── */
+    #hero {
+      min-height: calc(100vh - 60px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      gap: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.15);
+      pointer-events: none;
+    }
+    .hero-icons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      font-size: 32px;
+    }
+    .hero-title {
+      font-family: 'Press Start 2P', monospace;
+      font-size: clamp(20px, 4vw, 48px);
+      color: #5c4033;
+      line-height: 1.4;
+    }
+    .hero-sub {
+      font-family: 'VT323', monospace;
+      font-size: clamp(18px, 2.5vw, 24px);
+      color: #6b5644;
+    }
+    .hero-btn {
+      display: inline-block;
+      font-family: 'VT323', monospace;
+      font-size: 22px;
+      color: #5c4033;
+      background: rgba(244, 228, 193, 0.9);
+      border: 3px solid #8b6f47;
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+      padding: 8px 24px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.1s, box-shadow 0.1s;
+    }
+    .hero-btn:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+    }
+
+    /* ──────────────────────────────────
+       ABOUT
+    ────────────────────────────────── */
+    #about { background: transparent; font-size: 20px;}
+    .about-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .section-title {
+      font-family: 'Press Start 2P', monospace;
+      font-size: clamp(18px, 3vw, 36px);
+      color: #5c4033;
+      text-align: center;
+    }
+    .section-icon { font-size: 28px; }
+
+    /* Profile picture box */
+    .about-pic-box {
+      width: 250px;
+      height: 250px;
+      min-width: 160px;
+      border: 3px solid #8b6f47;
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+      background: rgba(244, 228, 193, 1);
+      margin: 0 auto 28px;
+      overflow: hidden;
+    }
+    .about-pic-box img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    @media (max-width: 600px) {
+      .about-cards { grid-template-columns: 1fr; }
+      
+    }
+
+    .about-card-title {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 20px;
+      color: #5c4033;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .about-card-title .emoji { font-size: 18px; }
+    .about-card p {
+      font-size: 25px;
+      color: #6b5644;
+      line-height: 1.5;
+    }
+
+    .season-list { display: flex; flex-direction: column; gap: 8px; }
+    .season-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 25px;
+    }
+    .season-label { color: #6b5644; }
+    .season-value { color: #5c4033; }
+
+    /* ──────────────────────────────────
+       SKILLS
+    ────────────────────────────────── */
+    #skills .card{
+      background: rgba(232, 212, 168, 0.2);
+      padding: 40px;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .skill-card-title {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 15px;
+      color: #5c4033;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .skill-tags {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .skill-tag {
+      background: rgba(255,255,255,0.5);
+      border: 1.5px solid #8b6f47;
+      padding: 10px 6px;
+      font-family: 'VT323', monospace;
+      font-size: 20px;
+      color: #6b5644;
+      text-align: center;
+    }
+
+    /* ──────────────────────────────────
+       HOBBIES
+    ────────────────────────────────── */
+    #hobbies {}
+    .hobbies-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    .hobbies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .hobby-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hobby-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 11px;
+      color: #5c4033;
+      padding: 6px 0;
+    }
+
+    .hobby-img-box img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .hobby-card img {
+      width: 100%;       /* fills the card width */
+      height: 420px;     /* ← control height here */
+      object-fit: cover; /* keeps image from stretching */
+    }
+
+    /* ──────────────────────────────────
+       CONTACT
+    ────────────────────────────────── */
+    #contact {
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-box {
+      width: 100%;
+      max-width: 580px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .contact-subtitle {
+      font-size: 20px;
+      color: #6b5644;
+      text-align: center;
+    }
+    .contact-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 500px) {
+      .contact-links { grid-template-columns: 1fr; }
+    }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.7);
+      border: 1.5px solid #8b6f47;
+      padding: 12px 14px;
+      font-family: 'VT323', monospace;
+      font-size: 17px;
+      color: #5c4033;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .contact-link:hover { background: rgba(255,255,255,0.9); }
+    .contact-link .ico { font-size: 20px; }
+
+    /* ──────────────────────────────────
+       FOOTER
+    ────────────────────────────────── */
+    footer {
+      background: #5c4a34;
+      border-top: 3px solid #8b6f47;
+      color: #d4c4a8;
+      padding: 32px 5% 20px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 28px;
+      margin-bottom: 24px;
+    }
+    .footer-col-title {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 9px;
+      color: #f4e4bc;
+      margin-bottom: 12px;
+    }
+    .footer-col a, .footer-col button {
+      display: block;
+      font-family: 'VT323', monospace;
+      font-size: 17px;
+      color: #d4c4a8;
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 2px 0;
+      text-align: left;
+    }
+    .footer-col a:hover, .footer-col button:hover { color: #f4e4bc; }
+    .footer-col p {
+      font-family: 'VT323', monospace;
+      font-size: 16px;
+      color: #d4c4a8;
+      line-height: 1.5;
+    }
+    .footer-bottom {
+      border-top: 2px solid #8b6f47;
+      padding-top: 16px;
+      text-align: center;
+      font-family: 'VT323', monospace;
+      font-size: 15px;
+      color: #d4c4a8;
+    }
+
+    /* ──────────────────────────────────
+       HAMBURGER (mobile)
+    ────────────────────────────────── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px; height: 2px;
+      background: #f4e4bc;
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 54px; right: 0; background: #8b6f47; padding: 16px 24px; gap: 12px; }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+    }
