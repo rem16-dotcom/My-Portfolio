@@ -119,7 +119,7 @@
     /* ──────────────────────────────────
        ABOUT
     ────────────────────────────────── */
-    #about { background: transparent; }
+    #about { background: transparent; font-size: 20px;}
     .about-header {
       display: flex;
       align-items: center;
@@ -137,8 +137,8 @@
 
     /* Profile picture box */
     .about-pic-box {
-      width: 160px;
-      height: 160px;
+      width: 250px;
+      height: 250px;
       min-width: 160px;
       border: 3px solid #8b6f47;
       box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
@@ -161,20 +161,21 @@
     }
     @media (max-width: 600px) {
       .about-cards { grid-template-columns: 1fr; }
+      
     }
 
     .about-card-title {
       font-family: 'Press Start 2P', monospace;
-      font-size: 13px;
+      font-size: 20px;
       color: #5c4033;
       margin-bottom: 14px;
       display: flex;
       align-items: center;
       gap: 8px;
     }
-    .about-card-title .emoji { font-size: 16px; }
+    .about-card-title .emoji { font-size: 18px; }
     .about-card p {
-      font-size: 18px;
+      font-size: 25px;
       color: #6b5644;
       line-height: 1.5;
     }
@@ -183,7 +184,7 @@
     .season-row {
       display: flex;
       justify-content: space-between;
-      font-size: 18px;
+      font-size: 25px;
     }
     .season-label { color: #6b5644; }
     .season-value { color: #5c4033; }
@@ -191,19 +192,20 @@
     /* ──────────────────────────────────
        SKILLS
     ────────────────────────────────── */
-    #skills {
+    #skills .card{
       background: rgba(232, 212, 168, 0.2);
+      padding: 40px;
     }
     .skills-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-      max-width: 700px;
+      max-width: 1000px;
       margin: auto;
     }
     .skill-card-title {
       font-family: 'Press Start 2P', monospace;
-      font-size: 12px;
+      font-size: 15px;
       color: #5c4033;
       margin-bottom: 14px;
       display: flex;
@@ -218,9 +220,9 @@
     .skill-tag {
       background: rgba(255,255,255,0.5);
       border: 1.5px solid #8b6f47;
-      padding: 6px 4px;
+      padding: 10px 6px;
       font-family: 'VT323', monospace;
-      font-size: 16px;
+      font-size: 20px;
       color: #6b5644;
       text-align: center;
     }
@@ -262,6 +264,11 @@
       width: 100%; height: 100%;
       object-fit: cover;
       display: block;
+    }
+    .hobby-card img {
+      width: 100%;       /* fills the card width */
+      height: 420px;     /* ← control height here */
+      object-fit: cover; /* keeps image from stretching */
     }
 
     /* ──────────────────────────────────
