@@ -1,234 +1,524 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Remiel's Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" />
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Rosalita Jr. — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Poppins:ital,wght@0,400;0,800;0,900&family=DM+Serif+Display:ital@1&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --maroon: #380404;
+      --maroonbg: rgba(56,4,4,0.94);
+      --white: #fff;
+      --nav-h: 54px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; background: var(--maroon); overflow-x: hidden; }
+
+    /* ══════════════ NAV ══════════════ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: var(--maroon);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(20px, 5vw, 90px);
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+    }
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 800;
+      font-style: italic;
+      font-size: clamp(12px, 1.5vw, 20px);
+      letter-spacing: 0.06em;
+      transition: opacity .2s;
+    }
+    nav a:hover { opacity: 0.6; }
+
+    /* ══════════════ HOME ══════════════
+       Full-screen background photo (outdoor/mall photo = airbrush-image-extender)
+       with "HI, I'm ALEX" and "Portfolio" text overlaid
+    ════════════════════════════════════ */
+    #home {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 500px;
+      overflow: hidden;
+    }
+
+    /* The outdoor/background photo fills the entire section */
+    .home-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    /* Dark gradient overlay so text is readable */
+    .home-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(56,4,4,0.72) 0%,
+        rgba(56,4,4,0.35) 50%,
+        rgba(0,0,0,0.2) 100%
+      );
+    }
+
+    /* Text block positioned top-left like the Figma */
+    .home-text {
+      position: absolute;
+      top: clamp(70px, 12vh, 130px);
+      left: clamp(24px, 6vw, 90px);
+      z-index: 2;
+    }
+    .home-hi {
+      font-size: clamp(48px, 9vw, 130px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+      text-shadow: 2px 4px 24px rgba(0,0,0,0.6);
+      white-space: nowrap;
+    }
+    .home-hi .cursive {
+      font-family: 'Pinyon Script', cursive;
+      font-weight: 400;
+      font-size: 1.1em;
+    }
+    .home-portfolio {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: clamp(52px, 10vw, 140px);
+      color: rgba(255,255,255,0.82);
+      line-height: 0.92;
+      text-shadow: 2px 4px 24px rgba(0,0,0,0.5);
+      margin-top: 4px;
+    }
+
+    /* ══════════════ INTRODUCTION ══════════════
+       Dark maroon bg. Photo on left (bottom-anchored, overflows top).
+       Text block on right. "INTRODUCTION" big label at the very bottom.
+    ════════════════════════════════════════════ */
+    #introduction {
+      position: relative;
+      width: 100%;
+      background: var(--maroonbg);
+      /* Enough height to fit photo + text + big label */
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top part: photo left + text right */
+    .intro-top {
+      flex: 1;
+      display: flex;
+      align-items: flex-end; /* photo sits at bottom of this area */
+      gap: 0;
+      padding: clamp(40px, 6vh, 80px) clamp(24px, 6vw, 80px) 0;
+      min-height: 0;
+    }
+
+    /* The cutout photo of Alex in white shirt */
+    .intro-photo {
+      width: clamp(200px, 26vw, 380px);
+      object-fit: contain;
+      object-position: bottom;
+      flex-shrink: 0;
+      align-self: flex-end;
+      /* Slight upward shift so it overlaps the label below */
+      margin-bottom: -15px;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 -4px 30px rgba(0,0,0,0.4));
+    }
+
+    /* Text content beside the photo */
+    .intro-body {
+      flex: 1;
+      min-width: 220px;
+      padding: clamp(20px, 4vw, 60px) clamp(20px, 3vw, 50px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+    }
+    .intro-body p {
+      font-size: clamp(15px, 1.8vw, 22px);
+      font-weight: 400;
+      color: rgba(255,255,255,0.92);
+      line-height: 1.85;
+    }
+    .intro-body p + p { margin-top: 20px; }
+
+    /* Big "INTRODUCTION" label at the bottom */
+    .intro-label {
+      font-family: 'Anton SC', sans-serif;
+      font-size: 220px;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      line-height: 1;
+      padding: 0 clamp(16px, 4vw, 60px);
+      padding-bottom: clamp(12px, 2vw, 28px);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ══════════════ EDUCATION ══════════════ */
+    #education {
+      position: relative;
+      background: var(--white);
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .edu-top {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      padding: clamp(40px, 6vh, 80px) clamp(24px, 6vw, 80px) 0;
+      gap: clamp(24px, 4vw, 60px);
+    }
+
+    .edu-entries {
+      flex: 1;
+      min-width: 220px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-bottom: 40px;
+      align-self: center;
+    }
+    .edu-entry h3 {
+      font-size: clamp(13px, 1.4vw, 17px);
+      font-weight: 900;
+      color: var(--maroon);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 4px;
+    }
+    .edu-entry p {
+      font-size: clamp(12px, 1.3vw, 15px);
+      color: var(--maroon);
+      line-height: 1.7;
+    }
+
+    /* Photo on the right, anchored to bottom */
+    .edu-photo {
+      width: clamp(160px, 20vw, 280px);
+      object-fit: contain;
+      object-position: bottom;
+      flex-shrink: 0;
+      align-self: flex-end;
+      margin-bottom: -40px;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 0 20px rgba(56,4,4,0.15));
+    }
+
+    .edu-label {
+      font-family: 'Anton SC', sans-serif;
+      font-size: 290px;
+      letter-spacing: 0.04em;
+      color: var(--maroon);
+      line-height: 1;
+      padding: 0 clamp(16px, 4vw, 60px) clamp(12px, 2vw, 28px);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ══════════════ HOBBIES ══════════════ */
+    #hobbies {
+      position: relative;
+      background: var(--maroonbg);
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hobbies-top {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      padding: clamp(40px, 6vh, 80px) clamp(24px, 6vw, 80px) 0;
+      gap: clamp(24px, 4vw, 60px);
+    }
+
+    .hobbies-list-wrap {
+      flex: 1;
+      min-width: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 40px;
+      align-self: center;
+    }
+    .hobbies-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hobbies-list li {
+      font-size: clamp(20px, 2.8vw, 36px);
+      font-weight: 800;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .hobbies-list li::before {
+      content: '▸';
+      color: rgba(255,255,255,0.35);
+      font-size: 0.7em;
+    }
+
+    .hobbies-photo {
+      width: clamp(180px, 22vw, 320px);
+      object-fit: contain;
+      object-position: bottom;
+      flex-shrink: 0;
+      align-self: flex-end;
+      margin-bottom: -200px;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 0 28px rgba(0,0,0,0.5));
+    }
+
+    .hobbies-label {
+      font-family: 'Anton SC', sans-serif;
+      font-size: 300px;
+      margin-left: auto;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      line-height: 1;
+      padding: 0 clamp(16px, 4vw, 60px) clamp(12px, 2vw, 28px);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ══════════════ CONTACT ══════════════ */
+    #contact {
+      position: relative;
+      background: var(--white);
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-top {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      padding: clamp(40px, 6vh, 80px) clamp(24px, 6vw, 80px) 0;
+      gap: clamp(24px, 4vw, 60px);
+    }
+
+    /* Contact photo on the left */
+    .contact-photo {
+      width: clamp(180px, 22vw, 320px);
+      object-fit: contain;
+      object-position: bottom;
+      flex-shrink: 0;
+      align-self: flex-end;
+      margin-bottom: -40px;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 0 20px rgba(0,0,0,0.2));
+    }
+
+    .contact-info {
+      flex: 1;
+      min-width: 220px;
+      align-self: center;
+      padding-bottom: 40px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px 40px;
+    }
+    .contact-item h4 {
+      font-size: clamp(12px, 1.3vw, 16px);
+      font-weight: 900;
+      color: var(--maroon);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 5px;
+    }
+    .contact-item p {
+      font-size: clamp(13px, 1.4vw, 16px);
+      color: var(--maroon);
+      font-weight: 400;
+    }
+
+    .contact-label {
+      font-family: 'Anton SC', sans-serif;
+      font-size: 230px;
+      letter-spacing: 0.04em;
+      color: var(--maroon);
+      line-height: 1;
+      padding: 0 clamp(16px, 4vw, 60px) clamp(12px, 2vw, 28px);
+      position: relative;
+      z-index: 1;
+      margin-top: auto;
+    }
+
+    /* ══════════════ RESPONSIVE ══════════════ */
+    @media (max-width: 600px) {
+      .intro-top, .edu-top, .hobbies-top, .contact-top {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+      }
+      .intro-photo, .edu-photo, .hobbies-photo, .contact-photo {
+        width: clamp(160px, 55vw, 260px);
+        margin-bottom: -20px;
+        align-self: center;
+      }
+      .intro-body, .edu-entries, .hobbies-list-wrap, .contact-info {
+        padding: 20px 20px 0;
+        text-align: center;
+      }
+      .hobbies-list { align-items: flex-start; width: 100%; }
+      .contact-grid { text-align: left; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- ── NAV ── -->
-<nav>
-  <span class="nav-logo">&#127806; Rem's Portfolio</span>
-  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-  <div class="nav-links">
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#hobbies">Hobbies</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#introduction">INTRODUCTION</a>
+    <a href="#education">EDUCATION</a>
+    <a href="#hobbies">HOBBIES</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
 
-<main>
-
-  <!-- ── HERO ── -->
-  <section id="hero">
-    <div class="hero-icons">
-      <span>&#127807;</span>
-      <span>&#127815;</span>
-      <span>&#127806;</span>
-    </div>
-    <h1 class="hero-title">Welcome to My<br>Portfolio</h1>
-    <p class="hero-sub">-where creativity grows one season at a time-</p>
-    <a class="hero-btn" href="#about">ABOUT ME</a>
-  </section>
-
-  <!-- ── ABOUT ── -->
-  <section id="about">
-    <div class="about-header">
-      <span class="section-icon">&#127807;</span>
-      <h2 class="section-title">About Me</h2>
-    </div>
-
-    <!-- Profile picture box — add your image inside -->
-    <div class="about-pic-box">
-       <img src="Messenger_creation_066B7497-6DF9-4B54-A239-F2625B67BDCF.jpeg" alt="Remiel"> 
-    </div>
-
-    <div class="about-cards">
-      <!-- My Story -->
-      <div class="card">
-        <div class="about-card-title">
-          <span class="emoji">&#9733;</span> My Story
-        </div>
-        <p>My name is Remiel A. Ucat. I am a motivated and detail-oriented individual with a passion for continuous learning and growth. I excel in mostly technical skills, allowing me to create efficient and well-organized solutions. I am committed to producing quality work and adapting effectively to new challenges.</p>
-      </div>
-
-      <!-- Current Season -->
-      <div class="card">
-        <div class="about-card-title">
-          <span class="emoji">&#9734;</span> Current Season
-        </div>
-        <div class="season-list">
-          <div class="season-row">
-            <span class="season-label">&#127800; Learning:</span>
-            <span class="season-value">Figma &amp; JavaScript</span>
-          </div>
-          <div class="season-row">
-            <span class="season-label">&#9728; Building:</span>
-            <span class="season-value">Web Applications</span>
-          </div>
-          <div class="season-row">
-            <span class="season-label">&#127810; Growing:</span>
-            <span class="season-value">Design Skills</span>
-          </div>
-          <div class="season-row">
-            <span class="season-label">&#10052; Planning:</span>
-            <span class="season-value">Game Development</span>
-          </div>
-        </div>
-      </div>
+  <!-- ══ HOME ══
+       airbrush-image-extender = the outdoor/mall background photo
+       Text "HI, I'm ALEX" + "Portfolio" overlaid on top
+  -->
+  <section id="home">
+    <img class="home-bg" src="airbrush-image-extender-10.png" alt="background" />
+    <div class="home-overlay"></div>
+    <div class="home-text">
+      <div class="home-hi">HI, <span class="cursive">I'm</span> ALEX</div>
+      <div class="home-portfolio">Portfolio</div>
     </div>
   </section>
 
-  <!-- ── SKILLS ── -->
-  <section id="skills">
-    <div class="about-header">
-      <span class="section-icon">&#9733;</span>
-      <h2 class="section-title">Skills</h2>
-      <span class="section-icon">&#9733;</span>
-    </div>
-
-    <div class="skills-grid">
-      <!-- Frontend -->
-      <div class="card">
-        <div class="skill-card-title"><span>&#9733;</span> Frontend</div>
-        <div class="skill-tags">
-          <div class="skill-tag">HTML</div>
-          <div class="skill-tag">JavaScript</div>
-          <div class="skill-tag">CSS</div>
-          <div class="skill-tag">React</div>
-        </div>
-      </div>
-
-      <!-- Backend -->
-      <div class="card">
-        <div class="skill-card-title"><span>&#9874;</span> Backend</div>
-        <div class="skill-tags">
-          <div class="skill-tag">Python</div>
-          <div class="skill-tag">SQL</div>
-          <div class="skill-tag">JavaScript</div>
-          <div class="skill-tag">PHP</div>
-        </div>
-      </div>
-
-      <!-- Design -->
-      <div class="card">
-        <div class="skill-card-title"><span>&#9824;</span> Design</div>
-        <div class="skill-tags">
-          <div class="skill-tag">Consistent</div>
-          <div class="skill-tag">UI/UX</div>
-          <div class="skill-tag">Responsive</div>
-          <div class="skill-tag">Animations</div>
-        </div>
-      </div>
-
-      <!-- Tools -->
-      <div class="card">
-        <div class="skill-card-title"><span>&#9889;</span> Tools</div>
-        <div class="skill-tags">
-          <div class="skill-tag">Git</div>
-          <div class="skill-tag">VS Code</div>
-          <div class="skill-tag">MySQL</div>
-          <div class="skill-tag">PyCharm</div>
-        </div>
+  <!-- ══ INTRODUCTION ══
+       _111111-10 = white shirt cutout photo (stands on the left)
+       Big "INTRODUCTION" label sits at the bottom
+  -->
+  <section id="introduction">
+    <div class="intro-top">
+      <img class="intro-photo" src="_111111-10.png" alt="Alex" />
+      <div class="intro-body">
+        <p>I am a BSIT student who is confident, strong-minded, and charismatic.</p>
+        <p>Known for my humor and approachable presence, I carry myself with confidence while staying focused and determined in my field.</p>
       </div>
     </div>
+    <div class="intro-label">INTRODUCTION</div>
   </section>
 
-  <!-- ── HOBBIES ── -->
+  <!-- ══ EDUCATION ══
+       _33-a-3007... = tall standing cutout (arms crossed, on the right)
+       Big "EDUCATION" label at the bottom
+  -->
+  <section id="education">
+    <div class="edu-top">
+      <div class="edu-entries">
+        <div class="edu-entry">
+          <h3>PSB Elementary School (2018)</h3>
+          <p>Made a lot of long term friends. My core memory is when I purposely startled our principal for fun. Gained compliments for being neat.</p>
+        </div>
+        <div class="edu-entry">
+          <h3>Opol National Secondary Technical School (2022)</h3>
+          <p>Consistent honor student. My core memory is when my friend got into a fight and I was gotten involved with it even though I haven't done anything.</p>
+        </div>
+        <div class="edu-entry">
+          <h3>Phinma Cagayan de Oro College (2024)</h3>
+          <p>Took up GAS Majoring in Criminology and was awarded as Snappy Student. Joined tournaments such as Mobile Legends in Panagtigi (intramurals), Ballroom Dance Contest, and was awarded a Leadership Awardee.</p>
+        </div>
+        <div class="edu-entry">
+          <h3>Opol Community College (Present)</h3>
+          <p>Taking up BSIT, now in the second year. Had an experience as rifle-man/colors in ROTC. Joined many dance contests, chants, and ML tournaments.</p>
+        </div>
+      </div>
+      <img class="edu-photo"in src="_33-a-3007-b-dc-41-4-eb-4-ba-3-b-ade-20-f-45753-e-1-10.png"Alex" />
+    </div>
+    <div class="edu-label">EDUCATION</div>
+  </section>
+
+  <!-- ══ HOBBIES ══
+       untitled-10 = seated/thinking pose photo
+       Big "HOBBIES" label at the bottom
+  -->
   <section id="hobbies">
-    <div class="hobbies-header">
-      <span class="section-icon">&#9824;</span>
-      <h2 class="section-title">MY HOBBIES</h2>
-      <span class="section-icon">&#9824;</span>
-    </div>
-
-    <div class="hobbies-grid">
-      <!-- Hobby card 1 — picture box left empty -->
-      <div class="hobby-card card">
-        <div class="hobby-card-header">
-          <span>&#9824;</span>
-          <span>DRAWING</span>
-          <span>&#9824;</span>
-        </div>
-        <img src="796a150b-6f6c-4b2b-a0f6-237411894666.gif" alt="Drawing">
-        <div class="hobby-img-box"></div>
+    <div class="hobbies-top">
+      <div class="hobbies-list-wrap">
+        <ul class="hobbies-list">
+          <li>Online Games</li>
+          <li>Nature Trips</li>
+          <li>Taking Random Videos</li>
+          <li>Dancing</li>
+          <li>Singing</li>
+        </ul>
       </div>
-
-      <!-- Hobby card 2 — picture box left empty -->
-      <div class="hobby-card card">
-        <div class="hobby-card-header">
-          <span>&#9874;</span>
-          <span>GAMING</span>
-          <span>&#9874;</span>
-        </div>
-        <img src="star.gif" alt="Drawing">
-        <div class="hobby-img-box"></div>
-      </div>
+      <img class="hobbies-photo" src="untitled-10.png" alt="Alex hobbies" />
     </div>
+    <div class="hobbies-label">HOBBIES</div>
   </section>
 
-  <!-- ── CONTACT ── -->
+  <!-- ══ CONTACT ══
+       untitled-2-10 = sunglasses overhead-angle photo
+       Big "CONTACT ME" label at the bottom
+  -->
   <section id="contact">
-    <div class="about-header">
-      <span class="section-icon">&#9993;</span>
-      <h2 class="section-title">Let's Connect</h2>
-    </div>
-
-    <div class="contact-box card">
-      <p class="contact-subtitle">Ready to start a new project together? Send me a message!</p>
-      <div class="contact-links">
-        <a class="contact-link" href="mailto:occ.ucat.remiel@gmail.com">
-          <span class="ico">&#9993;</span> occ.ucat.remiel@gmail.com
-        </a>
-        <a class="contact-link" href="mailto:remielucat26@gmail.com">
-          <span class="ico">&#9993;</span> remielucat26@gmail.com
-        </a>
-        <a class="contact-link" href="tel:+639707067405">
-          <span class="ico">&#9742;</span> +639707067405
-        </a>
-        <a class="contact-link" href="https://www.facebook.com/rem.ucat/about/?fb_profile_edit_entry_point=%7B%22click_point%22%3A%22edit_profile_button%22%2C%22feature%22%3A%22profile_header%22%7D&id=100075120802390&sk=about">
-          <span class="ico">&#9830;</span> Facebook
-        </a>
+    <div class="contact-top">
+      <img class="contact-photo" src="untitled-2-10.png" alt="Alex contact" />
+      <div class="contact-info">
+        <div class="contact-grid">
+          <div class="contact-item">
+            <h4>Email Address</h4>
+            <p><a href="mailto:alexrosalita@gmail.com">alexrosalita@gmail.com</a></p>
+          </div>
+          <div class="contact-item">
+            <h4>Phone Number</h4>
+            <p><a href="tel:+639 285 487 065">+639 285 487 065</a></p>
+          </div>
+          <div class="contact-item">
+            <h4>Facebook</h4>
+            <p><a href="https://www.facebook.com/alexrosalitajr">Alex Rosalita Jr.</a></p>
+          </div>
+          <div class="contact-item">
+            <h4>Instagram</h4>
+            <p><a href="https://www.instagram.com/rosaaaliittaaa/?hl=en">@rosaaaliittaaa</a></p>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="contact-label">CONTACT ME</div>
   </section>
-
-</main>
-
-<!-- ── FOOTER ── -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-col">
-      <div class="footer-col-title">&#127806; Harvest Dreams</div>
-      <p>Building digital farms one pixel at a time</p>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Quick Links</div>
-      <a href="#about">&#9658; About</a>
-      <a href="#skills">&#9658; Skills</a>
-      <a href="#hobbies">&#9658; Hobbies</a>
-      <a href="#contact">&#9658; Contacts</a>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Connect</div>
-      <a href="mailto:remielucat26@gmail.com">&#9658; remielucat26@gmail.com</a>
-      <a href="mailto:occ.ucat.remiel@gmail.com">&#9658; occ.ucat.remiel@gmail.com</a>
-      <a href="https://www.facebook.com/rem.ucat/about/?fb_profile_edit_entry_point=%7B%22click_point%22%3A%22edit_profile_button%22%2C%22feature%22%3A%22profile_header%22%7D&id=100075120802390&sk=about">&#9658; Facebook</a>
-      <a href="https://www.instagram.com/remucat16/">&#9658; Instagram</a>
-      <a href="https://discord.gg/rAec4UGs">&#9658; Discord</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    &copy; 2026 &bull; Made with love and pixels &bull; Inspired by Stardew Valley
-  </div>
-</footer>
 
 </body>
 </html>
