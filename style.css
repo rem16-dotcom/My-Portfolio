@@ -31,6 +31,9 @@
       white-space: nowrap;
       text-decoration: none;
     }
+    .nav-logo :hover{
+      color: #fff;
+    }
     .nav-links {
       display: flex;
       gap: 24px;
