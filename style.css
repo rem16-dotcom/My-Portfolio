@@ -1,6 +1,9 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     a { text-decoration: none; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
     body {
       font-family: 'VT323', monospace;
       background: linear-gradient(180deg,
@@ -10,6 +13,8 @@
         #d2e1c0 86%, #cde4c4 93%, #c8e6c9 100%);
       min-height: 100vh;
       color: #5c4033;
+      overflow-x: hidden;
+      width: 100%;
     }
 
     /* ── NAV ── */
@@ -94,14 +99,18 @@
     }
     .hero-title {
       font-family: 'Press Start 2P', monospace;
-      font-size: clamp(20px, 4vw, 48px);
+      font-size: clamp(16px, 5vw, 48px);
       color: #5c4033;
-      line-height: 1.4;
+      line-height: 1.6;
+      word-break: break-word;
+      padding: 0 12px;
     }
     .hero-sub {
       font-family: 'VT323', monospace;
-      font-size: clamp(18px, 2.5vw, 24px);
+      font-size: clamp(16px, 4vw, 24px);
       color: #6b5644;
+      padding: 0 12px;
+      word-break: break-word;
     }
     .hero-btn {
       display: inline-block;
@@ -134,9 +143,10 @@
     }
     .section-title {
       font-family: 'Press Start 2P', monospace;
-      font-size: clamp(18px, 3vw, 36px);
+      font-size: clamp(14px, 3.5vw, 36px);
       color: #5c4033;
       text-align: center;
+      word-break: break-word;
     }
     .section-icon { font-size: 28px; }
 
@@ -171,12 +181,13 @@
 
     .about-card-title {
       font-family: 'Press Start 2P', monospace;
-      font-size: 20px;
+      font-size: clamp(11px, 3vw, 20px);
       color: #5c4033;
       margin-bottom: 14px;
       display: flex;
       align-items: center;
       gap: 8px;
+      word-break: break-word;
     }
     .about-card-title .emoji { font-size: 18px; }
     .about-card p {
@@ -271,9 +282,9 @@
       display: block;
     }
     .hobby-card img {
-      width: 100%;      
-      height: 420px;     
-      object-fit: cover; 
+      width: 100%;       /* fills the card width */
+      height: 420px;     /* ← control height here */
+      object-fit: cover; /* keeps image from stretching */
     }
 
     /* ──────────────────────────────────
@@ -420,4 +431,25 @@
       }
       .nav-links.open { display: flex; }
       .hamburger { display: flex; flex-shrink: 0; }
+
+      section { padding: 48px 4%; }
+
+      .about-cards { grid-template-columns: 1fr; }
+
+      .skills-grid { grid-template-columns: 1fr; }
+
+      .skill-card-title {
+        font-size: clamp(10px, 3vw, 15px);
+      }
+
+      .hobby-card img { height: 240px; }
+
+      .footer-grid { grid-template-columns: 1fr; }
+
+      .contact-links { grid-template-columns: 1fr; }
+
+      .about-pic-box {
+        width: 180px;
+        height: 180px;
+      }
     }
