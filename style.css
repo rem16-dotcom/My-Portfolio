@@ -29,6 +29,7 @@
       font-size: 11px;
       color: #f4e4bc;
       white-space: nowrap;
+      text-decoration: none;
     }
     .nav-links {
       display: flex;
