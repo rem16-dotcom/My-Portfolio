@@ -11,16 +11,16 @@
 
 <!-- ── NAV ── -->
 <nav>
-  <span class="nav-logo">&#127806; Rem's Portfolio</span>
+  <a class="nav-logo" href="#hero">&#127806; Rem's Portfolio</a>
   <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
   <div class="nav-links">
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#hobbies">Hobbies</a>
-    <a href="#contact">Contact</a>
+    <a href="#hero"    onclick="document.querySelector('.nav-links').classList.remove('open')">Home</a>
+    <a href="#about"   onclick="document.querySelector('.nav-links').classList.remove('open')">About</a>
+    <a href="#skills"  onclick="document.querySelector('.nav-links').classList.remove('open')">Skills</a>
+    <a href="#hobbies" onclick="document.querySelector('.nav-links').classList.remove('open')">Hobbies</a>
+    <a href="#contact" onclick="document.querySelector('.nav-links').classList.remove('open')">Contact</a>
   </div>
 </nav>
 
@@ -45,7 +45,6 @@
       <h2 class="section-title">About Me</h2>
     </div>
 
-    <!-- Profile picture box — add your image inside -->
     <div class="about-pic-box">
        <img src="Messenger_creation_066B7497-6DF9-4B54-A239-F2625B67BDCF.jpeg" alt="Remiel"> 
     </div>
