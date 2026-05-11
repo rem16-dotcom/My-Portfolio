@@ -31,7 +31,7 @@
       white-space: nowrap;
       text-decoration: none;
     }
-    .nav-logo a:hover{
+    .nav-logo:hover{
       color: #fff;
     }
     .nav-links {
